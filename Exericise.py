@@ -1,6 +1,6 @@
 """
     Fecha:20/09/2023
-    Autor: Juan Esteban Florez, jhan carlos, Luis Angel 
+    Autor: Juan Esteban Florez, jhan carlos, Luis Angel , Stefano Totti delgado
     Objetivo: Se requiere un software que calcule si un aprendiz tiene el estilo de aprendizaje Asimilador.
     Para ello deben realizarse 7 preguntas de respuesta SI o NO. 
     Si el aprendiz obtuvo 4 o más respuestas en SI entonces el sistema deberá indicarle que es Asimilador, 
@@ -9,16 +9,16 @@
 
 print("Bienvenido Aprendiz.")
 
-def calcular_estilo_aprendizaje(respuestas):
-    contador_si = respuestas.count("Y")
-    if contador_si >= 4:
+def calcular_estilo_aprendizaje(answers):
+   counter_yes = answers.count("Y")
+   if counter_yes >= 4:
         return "Asimilador"
-    else:
+   else:
         return "Otro estilo de aprendizaje"
 
-def realizar_encuesta():
-    respuestas = []
-    preguntas = [
+def conduct_survey():
+    answers = []
+    questions = [
         "1.Cuando aprendes algo nuevo, ¿prefieres que te presenten teorías o conceptos antes que ejemplos prácticos?",
         "2.¿Te sientes más cómodo aprendiendo a través de la lectura de libros o materiales escritos?",
         "3.¿Encuentras útil hacer esquemas, resúmenes o diagramas para organizar la información que estás aprendiendo?",
@@ -28,13 +28,13 @@ def realizar_encuesta():
         "7.¿Prefieres aprender de manera independiente en lugar de trabajar en grupos o equipos?"
     ]
 
-    for pregunta in preguntas:
-        respuesta = input(pregunta + " (Y/N): ")
-        while respuesta.upper() not in ["Y", "N"]:
-            respuesta = input("Por favor, responde con Y o N: ")
-        respuestas.append(respuesta.upper())
+    for question in questions:
+        answer = input(question + " (Y/N): ")
+        while answer.upper() not in ["Y", "N"]:
+            answer = input("Por favor, responde con Y o N: ")
+        answers.append(answer.upper())
 
-    estilo_aprendizaje = calcular_estilo_aprendizaje(respuestas)
+    estilo_aprendizaje = calcular_estilo_aprendizaje(answers)
     print("Tu estilo de aprendizaje es:", estilo_aprendizaje)
 
-realizar_encuesta()
+conduct_survey()
