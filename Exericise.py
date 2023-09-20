@@ -1,6 +1,6 @@
 """
     Fecha:20/09/2023
-    Autor: Juan Esteban Florez, jhan carlos 
+    Autor: Juan Esteban Florez, jhan carlos, Luis Angel 
     Objetivo: Se requiere un software que calcule si un aprendiz tiene el estilo de aprendizaje Asimilador.
     Para ello deben realizarse 7 preguntas de respuesta SI o NO. 
     Si el aprendiz obtuvo 4 o más respuestas en SI entonces el sistema deberá indicarle que es Asimilador, 
